@@ -355,8 +355,19 @@ display: none;
 </div>
 
 
-<p>##Dataset loading</p>
-<pre class="r"><code>library(tidyverse)</code></pre>
+<p>##<em>Exercise 1</em> 1. A developer creates a new GitHub repository,
+which contains an Rmarkdown file that has an R code chunk defining a
+function with a single argument <code>data</code>, that takes a dataset
+and performs some input transformation on it. This transformation can be
+as simple or complex as you like, but should work on at least one
+dataset (either a built-in R dataset, or one provided by you in the
+public repository). The function should return the transformed data. 2.
+The developer knits the Rmarkdown file, which generates an HTML file
+with the function inside a code chunk and the output of the function
+after running it on the dataset. The developer includes this knitted
+HTML file in the repository.</p>
+<pre class="r"><code>#Loading libraries
+library(tidyverse)</code></pre>
 <pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ## ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ## ✔ forcats   1.0.0     ✔ stringr   1.5.1
@@ -367,7 +378,8 @@ display: none;
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-<pre class="r"><code>library(datasets)
+<pre class="r"><code>#The datasets library is used for this exercise, with the iris dataset  for the following exercise
+library(datasets)
 head(iris)</code></pre>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ## 1          5.1         3.5          1.4         0.2  setosa
@@ -376,7 +388,8 @@ head(iris)</code></pre>
 ## 4          4.6         3.1          1.5         0.2  setosa
 ## 5          5.0         3.6          1.4         0.2  setosa
 ## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
-<pre class="r"><code>data&lt;- iris
+<pre class="r"><code>#Rename the dataset from iris to &#39;data&#39;
+data&lt;- iris
 head(data)</code></pre>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ## 1          5.1         3.5          1.4         0.2  setosa
@@ -385,7 +398,8 @@ head(data)</code></pre>
 ## 4          4.6         3.1          1.5         0.2  setosa
 ## 5          5.0         3.6          1.4         0.2  setosa
 ## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
-<pre class="r"><code>data$Sepal.Length&lt;-round(data$Sepal.Length,0)
+<pre class="r"><code>#Round values for the Sepal Length
+data$Sepal.Length&lt;-round(data$Sepal.Length,0)
 head(data)</code></pre>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ## 1            5         3.5          1.4         0.2  setosa
