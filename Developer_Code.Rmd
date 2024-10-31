@@ -31,8 +31,8 @@ head(data)
 3. The developer wishes to a second function that does a different transformation, but also takes a single argument `data` (a dataset) and returns a transformed dataset. To preserve the integrity of the main branch, they add this functionality in a new branch called `dev`, which they do *not* immediately merge into main.
 
 ```{r}
-data$Petal.Area<- data$Petal.Length*data$Petal.Width
-head(data)
+data_new$Petal.Area<- data$Petal.Length*data$Petal.Width
+head(data_new)
 
 ```
 
