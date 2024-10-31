@@ -36,6 +36,8 @@ data_new <- data
 head(data_new)
 
 ```
+5. Once they are home, the developer knits the Rmarkdown file again, now containing the second function with the `data_new` argument, and including the updated knitted HTML file in the repo. The developer then merges the `dev` branch into `main` and deletes it.
+
 
 
 

@@ -416,8 +416,9 @@ the main branch, they add this functionality in a new branch called
 <code>dev</code>, which they do <em>not</em> immediately merge into
 main.</li>
 </ol>
-<pre class="r"><code>data$Petal.Area&lt;- data$Petal.Length*data$Petal.Width
-head(data)</code></pre>
+<pre class="r"><code>data$Petal.Area &lt;- data$Petal.Length*data$Petal.Width
+data_new &lt;- data
+head(data_new)</code></pre>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Petal.Area
 ## 1            5         3.5          1.4         0.2  setosa       0.28
 ## 2            5         3.0          1.4         0.2  setosa       0.28
@@ -425,6 +426,13 @@ head(data)</code></pre>
 ## 4            5         3.1          1.5         0.2  setosa       0.30
 ## 5            5         3.6          1.4         0.2  setosa       0.28
 ## 6            5         3.9          1.7         0.4  setosa       0.68</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Once they are home, the developer knits the Rmarkdown file again,
+now containing the second function with the <code>data_new</code>
+argument, and including the updated knitted HTML file in the repo. The
+developer then merges the <code>dev</code> branch into <code>main</code>
+and deletes it.</li>
+</ol>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the
 code chunk to prevent printing of the R code that generated the
 plot.</p>
